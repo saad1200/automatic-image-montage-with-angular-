@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html id="ng-app" data-ng-app="app">
+    <head>
+        <title>Automatic Image Montage with Angularjs</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css' />
+    </head>
+  <body style="background:#000;">
+
+      <div class="container">
+          <div data-ng-view></div>
+      </div>
+      
+      <script src="public/bower_components/angular/angular.min.js"></script>
+      <script src="public/bower_components/angular-route/angular-route.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <script type="text/javascript" src="js/jquery.montage.min.js"></script>
+      
+      <!-- Bootstrapping -->
+      <script type="text/javascript" src="app/app.js"></script>
+      <script type="text/javascript" src="app/config/config.route.js"></script>
+      
+      <!-- app -->
+      <script type="text/javascript" src="app/dashboard/dashboard.js"></script>
+      <script type="text/javascript" src="app/dashboard/gallery.js"></script>
+      
+
+  </body>
+</html>
+    

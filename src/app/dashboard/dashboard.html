@@ -1,0 +1,7 @@
+<div data-ng-controller="dashboard as vm">
+    
+    <gallery size="{{vm.posts.length}}">
+        <a href="#" data-ng-repeat="post in vm.posts" ><img class="galleryImage"  data-ng-src="{{post.imageUrl}}" galleryImage></img></a>
+    </gallery>
+
+</div>
