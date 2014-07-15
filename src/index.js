@@ -12,7 +12,7 @@
         function activate() {
             
             for(var i = 1; i<73;i++){
-                vm.posts.push({imageUrl: 'images/'+ i +'.jpg'});
+                vm.posts.push({imageUrl: 'public/images/'+ i +'.jpg'});
             }
         };
     
