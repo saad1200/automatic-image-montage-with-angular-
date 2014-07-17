@@ -6,20 +6,42 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="public/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css' />
     </head>
     <body style="background:#000;" data-ng-controller="dashboard as vm">
 
-      <div class="container">
+        <!-- gallery -->
+        <div class="container">
             <gallery size="{{vm.posts.length}}">
-                <a href="#" data-ng-repeat="post in vm.posts" ><img class="galleryImage"  data-ng-src="{{post.imageUrl}}" galleryImage></img></a>
+                <a href="#" data-ng-repeat="post in vm.posts" data-ng-click="vm.show($index)"><img class="galleryImage"  data-ng-src="{{post.imageUrl}}" galleryImage></img></a>
             </gallery>
-      </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{vm.selectedPost.header}}</h4>
+              </div>
+              <div class="modal-body">
+                <img src="{{vm.selectedPost.imageUrl}}" ></img>
+                {{vm.selectedPost.body}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
       <script type="text/javascript" src="public/libraries/angular.min.js"></script>
       <script type="text/javascript" src="public/libraries/angular-route.min.js"></script>
       <script type="text/javascript" src="public/libraries/jquery.min.js"></script>
+      <script type="text/javascript" src="public/libraries/bootstrap.min.js"></script>
       <script type="text/javascript" src="public/libraries/jquery.montage.min.js"></script>
 
       <!-- Bootstrapping -->
